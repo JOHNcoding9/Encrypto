@@ -1,5 +1,9 @@
 Este projeto criptografa mensagens automaticamente para você com a chave de sua escolha.
 
+Como funciona? 
+ Insira a mensagem a ser criptografada  (ou descriptografada) no bloco de notas "mensagem.txt", execute o código Encrypto.py e selecione o método de criptografia utilizado. O resultado da sua mensagem criptografada (ou descriptografada) estará presente no bloco de notas 
+ "mensagem_resultado"
+
 EXPLICANDO A CIFRA DE CÉSAR
 Como esta criptografia funciona?
 O princípio básico da cifra de César é o deslocamento. Para criptografar uma mensagem, basta deslocar cada letra da mensagem original por um número fixo de posições. Vamos explicar como isso acontece em dois processos: criptografar e descriptografar.
