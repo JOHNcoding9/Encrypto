@@ -1,8 +1,22 @@
 Este projeto criptografa mensagens automaticamente para você com a chave de sua escolha.
 
-Como funciona? 
+COMO FUNCIONA? 
  Insira a mensagem a ser criptografada  (ou descriptografada) no bloco de notas "mensagem.txt", execute o código Encrypto.py e selecione o método de criptografia utilizado. O resultado da sua mensagem criptografada (ou descriptografada) estará presente no bloco de notas 
  "mensagem_resultado"
+
+ Antes de realizar as substituições de alfabeto para a criptografia, o programa trata todas as letras acentuadas ( e o Ç), substituindo suas ocorrências na mensagem por uma versão não acentuada.
+     # Dicionário com as substituições de caracteres acentuados
+     acentuados = {
+    'Ç': 'C', 'À': 'A', 'Â': 'A', 'Ä': 'A', 'Ã': 'A', 'Å': 'A', 'Æ': 'AE', 'Ç': 'C',
+    'É': 'E', 'È': 'E', 'Ê': 'E', 'Ë': 'E', 'Í': 'I', 'Ì': 'I', 'Î': 'I', 'Ï': 'I',
+    'Ñ': 'N', 'Ó': 'O', 'Ò': 'O', 'Ô': 'O', 'Õ': 'O', 'Ö': 'O', 'Ø': 'O', 'Ú': 'U',
+    'Ù': 'U', 'Û': 'U', 'Ü': 'U', 'Ý': 'Y', 'À': 'A', 'Á': 'A', 'Ã': 'A', 'Â': 'A',
+    'Ä': 'A', 'Ç': 'C', 'È': 'E', 'É': 'E', 'Ê': 'E', 'Í': 'I', 'Ï': 'I', 'Ì': 'I',
+    'Î': 'I', 'Ó': 'O', 'Ò': 'O', 'Ô': 'O', 'Õ': 'O', 'Ö': 'O', 'Ú': 'U', 'Ù': 'U',
+    'Û': 'U', 'Ü': 'U', 'Ÿ': 'Y', 'Œ': 'OE', 'Æ': 'AE'
+  }
+ A primeira letra corresponde á original e a segunda é a sua substituta.
+    
 
 EXPLICANDO A CIFRA DE CÉSAR
 Como esta criptografia funciona?
