@@ -13,13 +13,10 @@ def Remover_acentos(texto):
 
     # Dicionário com as substituições de caracteres acentuados
      acentuados = {
-    'Ç': 'C', 'À': 'A', 'Â': 'A', 'Ä': 'A', 'Ã': 'A', 'Å': 'A', 'Æ': 'AE',
+    'Ç': 'C', 'À': 'A', 'Â': 'A', 'Ä': 'A', 'Ã': 'A', 'Æ': 'AE',
     'É': 'E', 'È': 'E', 'Ê': 'E', 'Ë': 'E', 'Í': 'I', 'Ì': 'I', 'Î': 'I', 'Ï': 'I',
     'Ñ': 'N', 'Ó': 'O', 'Ò': 'O', 'Ô': 'O', 'Õ': 'O', 'Ö': 'O', 'Ø': 'O', 'Ú': 'U',
-    'Ù': 'U', 'Û': 'U', 'Ü': 'U', 'Ý': 'Y', 'À': 'A', 'Á': 'A', 'Ã': 'A', 'Â': 'A',
-    'Ä': 'A', 'Ç': 'C', 'È': 'E', 'É': 'E', 'Ê': 'E', 'Í': 'I', 'Ï': 'I', 'Ì': 'I',
-    'Î': 'I', 'Ó': 'O', 'Ò': 'O', 'Ô': 'O', 'Õ': 'O', 'Ö': 'O', 'Ú': 'U', 'Ù': 'U',
-    'Û': 'U', 'Ü': 'U', 'Ÿ': 'Y', 'Œ': 'OE', 'Æ': 'AE'
+    'Ù': 'U', 'Û': 'U', 'Ü': 'U', 'Ý': 'Y', 'Á': 'A','Ÿ': 'Y', 'Œ': 'OE'
   }
     # Substitui os caracteres acentuados com base no dicionário
      for caractere_acentuado, caractere_sem_acentos in acentuados.items():
