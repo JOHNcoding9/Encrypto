@@ -7,7 +7,7 @@ COMO FUNCIONA?
  Antes de realizar as substituições de alfabeto para a criptografia, o programa trata todas as letras acentuadas ( e o Ç), substituindo suas ocorrências na mensagem por uma versão não acentuada.
      # Dicionário com as substituições de caracteres acentuados
      acentuados = {
-    'Ç': 'C', 'À': 'A', 'Â': 'A', 'Ä': 'A', 'Ã': 'A', 'Å': 'A', 'Æ': 'AE', 'Ç': 'C',
+    'Ç': 'C', 'À': 'A', 'Â': 'A', 'Ä': 'A', 'Ã': 'A', 'Å': 'A', 'Æ': 'AE',
     'É': 'E', 'È': 'E', 'Ê': 'E', 'Ë': 'E', 'Í': 'I', 'Ì': 'I', 'Î': 'I', 'Ï': 'I',
     'Ñ': 'N', 'Ó': 'O', 'Ò': 'O', 'Ô': 'O', 'Õ': 'O', 'Ö': 'O', 'Ø': 'O', 'Ú': 'U',
     'Ù': 'U', 'Û': 'U', 'Ü': 'U', 'Ý': 'Y', 'À': 'A', 'Á': 'A', 'Ã': 'A', 'Â': 'A',
