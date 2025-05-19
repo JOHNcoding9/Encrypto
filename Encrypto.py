@@ -1,4 +1,4 @@
-import random
+import secrets
  # Lê o conteúdo de um arquivo de texto
 try:
     with open('mensagem.txt', 'r', encoding='utf-8') as file:
@@ -151,10 +151,10 @@ def Monoalfabetica():
      if pergunta == 0:
        # a letra nova não pode se repetir de novo no alfabeto
        for i,letra in enumerate(alfabeto):
-        nova_letra = random.choice(alfabeto_copia)
+        nova_letra = secrets.choice(alfabeto_copia)
 
         while nova_letra == letra or nova_letra in letra_usada:
-          nova_letra = random.choice(alfabeto_copia)  
+          nova_letra = secrets.choice(alfabeto_copia)  
     
         letra_usada.append(nova_letra)
         alfabeto[i] = nova_letra
