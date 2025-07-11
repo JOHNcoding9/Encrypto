@@ -16,9 +16,9 @@ This Python project automatically encrypts messages for you, using the key of yo
 4.Follow the instructions shown in the terminal.
 5.The result of your encrypted message (or decrypted) will be available in the note block "mensagem_resultado"
 
----
 
-##🔡 Character Normalization
+
+### 🔡 Character Normalization
 Before applying encryption, the program replaces accented characters and special letters (e.g., Ç, É, Ã) with their normalized ASCII equivalents to ensure compatibility with the cipher:
  
    Dictionary of normalization
@@ -37,7 +37,7 @@ This mapping ensures all input is safely processed without Unicode issues.
 ----
     
 
-##:key:  Explaining Caesar Cipher
+###:key:  Explaining Caesar Cipher
 1. Encrypting with the Caesar Cipher
 Imagine you have the text **"HELLO"** and want to encrypt it with a **shift of 3**. This means each letter in the word (HELLO) will be **replaced by the letter that is 3 positions ahead of it in the alphabet**:
 
