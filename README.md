@@ -125,3 +125,13 @@ An attacker can analyze the frequency of characters in the ciphertext and compar
 If the substitution alphabet is guessed or leaked, the entire message becomes readable instantly.
 
 Therefore, although it's historically significant and fun to experiment with, the Monoalphabetic Cipher is not suitable for protecting real-world data.
+
+
+## 📦 Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/JOHNcoding9/Encrypto.git
+cd Encrypto
+
