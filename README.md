@@ -69,7 +69,7 @@ For example, in a language like Portuguese, the letter "A" is much more common t
 In modern cryptographic terms, the Caesar Cipher is not secure.
 Although it was useful in ancient times, its simplicity makes it easily breakable using computational tools.
 
-<br>
+<br/>
 
 ### 🅰 Explaining Monoalphabetic Substitution Cipher
 
