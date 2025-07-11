@@ -16,10 +16,10 @@ This Python project automatically encrypts messages for you, using the key of yo
 4.Follow the instructions shown in the terminal.
 5.The result of your encrypted message (or decrypted) will be available in the note block "mensagem_resultado"
 
-##🔡 Character Normalization
+#🔡 Character Normalization
 Before applying encryption, the program replaces accented characters and special letters (e.g., Ç, É, Ã) with their normalized ASCII equivalents to ensure compatibility with the cipher:
  
-   # Dictionary of normalization
+   Dictionary of normalization
    acentuados = {
     'Ç': 'C', 'À': 'A', 'Â': 'A', 'Ä': 'A', 'Ã': 'A', 'Å': 'A', 'Æ': 'AE',
     'É': 'E', 'È': 'E', 'Ê': 'E', 'Ë': 'E', 'Í': 'I', 'Ì': 'I', 'Î': 'I', 'Ï': 'I',
