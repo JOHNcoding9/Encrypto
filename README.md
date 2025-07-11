@@ -1,12 +1,26 @@
-Este projeto criptografa mensagens automaticamente para você com a chave de sua escolha.
+# 🔐 Encrypto – Text-Based Message Encryption Tool
 
-COMO FUNCIONA? 
- Insira a mensagem a ser criptografada  (ou descriptografada) no bloco de notas "mensagem.txt", execute o código Encrypto.py e selecione o método de criptografia utilizado. O resultado da sua mensagem criptografada (ou descriptografada) estará presente no bloco de notas 
- "mensagem_resultado"
+This Python project automatically encrypts messages for you, using the key of your choice.
 
- Antes de realizar as substituições de alfabeto para a criptografia, o programa trata todas as letras acentuadas ( e o Ç), substituindo suas ocorrências na mensagem por uma versão não acentuada.
-     # Dicionário com as substituições de caracteres acentuados
-     acentuados = {
+> ⚠️ **Note:**  
+> This is **not** safe encryption for sensitive data, **nor secure** encryption **by modern standards**.  
+> It exists for **educational purposes only**.
+
+## 🧩 How to Use
+
+1. Open the file `mensagem.txt` and write the message you want to encrypt or decrypt (in uppercase or lowercase).
+2. Run the program:
+   ```bash
+   python Encrypto.py
+3.Choose the encryption method (Caesar or Monoalphabetic).
+4.Follow the instructions shown in the terminal.
+5.The result of your encrypted message (or decrypted) will be available in the note block "mensagem_resultado"
+
+##🔡 Character Normalization
+Before applying encryption, the program replaces accented characters and special letters (e.g., Ç, É, Ã) with their normalized ASCII equivalents to ensure compatibility with the cipher:
+ 
+   # Dictionary of normalization
+   acentuados = {
     'Ç': 'C', 'À': 'A', 'Â': 'A', 'Ä': 'A', 'Ã': 'A', 'Å': 'A', 'Æ': 'AE',
     'É': 'E', 'È': 'E', 'Ê': 'E', 'Ë': 'E', 'Í': 'I', 'Ì': 'I', 'Î': 'I', 'Ï': 'I',
     'Ñ': 'N', 'Ó': 'O', 'Ò': 'O', 'Ô': 'O', 'Õ': 'O', 'Ö': 'O', 'Ø': 'O', 'Ú': 'U',
@@ -15,42 +29,87 @@ COMO FUNCIONA?
     'Î': 'I', 'Ó': 'O', 'Ò': 'O', 'Ô': 'O', 'Õ': 'O', 'Ö': 'O', 'Ú': 'U', 'Ù': 'U',
     'Û': 'U', 'Ü': 'U', 'Ÿ': 'Y', 'Œ': 'OE', 'Æ': 'AE'
   }
- A primeira letra corresponde á original e a segunda é a sua substituta.
+This mapping ensures all input is safely processed without Unicode issues.
     
 
-EXPLICANDO A CIFRA DE CÉSAR
-Como esta criptografia funciona?
-O princípio básico da cifra de César é o deslocamento. Para criptografar uma mensagem, basta deslocar cada letra da mensagem original por um número fixo de posições. Vamos explicar como isso acontece em dois processos: criptografar e descriptografar.
+##:key:  Explaining Caesar Cipher
+1. Encrypting with the Caesar Cipher
+Imagine you have the text **"HELLO"** and want to encrypt it with a **shift of 3**. This means each letter in the word (HELLO) will be **replaced by the letter that is 3 positions ahead of it in the alphabet**:
 
-1. Criptografando com a Cifra de César
-Imaginemos que você tenha o texto "HELLO" e queira criptografá-lo com um deslocamento de 3. Isso significa que cada letra da palavra será substituída pela letra que está 3 posições à frente dela no alfabeto:
+H → K (H + 3 positions)  
+E → H (E + 3 positions)  
+L → O (L + 3 positions)  
+L → O (L + 3 positions)  
+O → R (O + 3 positions)
+Thus, the word "HELLO" becomes "KHOOR" after being encrypted with a shift of 3.
 
-H → K (H + 3)
+2. Decrypting with the Caesar Cipher
+To decrypt the message, the process is **reversed**. That is, for each encrypted letter, you must shift it in the **opposite direction**. So, for the word "KHOOR" with a shift of 3:
 
-E → H (E + 3)
+K → H (K - 3 positions)  
+H → E (H - 3 positions)  
+O → L (O - 3 positions)  
+O → L (O - 3 positions)  
+R → O (R - 3 positions)
+The word "KHOOR" becomes "HELLO" again.
 
-L → O (L + 3)
+The Caesar Cipher is very simple and easy to break, which makes it insecure for real use.
+Its main weakness is the fact that it has only 25 possible shift values (in an alphabet with 26 letters). That means an attacker would only need to try 25 different shifts, which can be done very quickly.
 
-L → O (L + 3)
+Furthermore, Caesar Cipher does not consider the frequency of letters in a language.
+For example, in a language like Portuguese, the letter "A" is much more common than the letter "X". This means that an attacker could easily analyze the encrypted text and deduce which letter corresponds to which, using techniques such as frequency analysis.
 
-O → R (O + 3)
+In modern cryptographic terms, the Caesar Cipher is not secure.
+Although it was useful in ancient times, its simplicity makes it easily breakable using computational tools.
 
-Assim, a palavra "HELLO" se torna "KHOOR" após a criptografia com um deslocamento de 3.
 
-2. Descriptografando com a Cifra de César
-Para descriptografar a mensagem, o processo é invertido. Ou seja, para cada letra criptografada, você deve deslocá-la no sentido oposto. Então, para a palavra "KHOOR", com um deslocamento de 3:
+##:regional_indicator_a:  Explaining Monoalphabetic Substitution Cipher
+1. What Is It?
+The Monoalphabetic Cipher is a substitution cipher in which each letter in the plaintext is replaced by another unique letter from the alphabet.
+Unlike the Caesar Cipher, which shifts letters by a fixed amount, the Monoalphabetic Cipher uses a custom substitution alphabet, which can be:
 
-K → H (K - 3)
+-Manually defined by the user (e.g., A → Q, B → R, C → T, etc.)
 
-H → E (H - 3)
+-Randomly generated by the system, as long as:
 
-O → L (O - 3)
+  * No letter maps to itself
 
-O → L (O - 3)
+  * No duplicates exist in the new alphabet
 
-R → O (R - 3)
+For example, if the standard alphabet is:
 
-Assim, a palavra "KHOOR" volta a ser "HELLO".
-A cifra de César é muito simples e fácil de ser quebrada, o que a torna insegura para uso real. A principal fraqueza da cifra é o fato de ela ter apenas 25 possibilidades de deslocamento (no caso de um alfabeto de 26 letras). Ou seja, para quebrar uma cifra de César, um atacante só precisaria tentar 25 diferentes deslocamentos, o que é muito rápido.
+Original: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+And the new alphabet is
+Substit.: Q W E R T Y U I O P A S D F G H J K L Z X C V B N M
+Then the message "HELLO" would be encrypted as follows:
 
-Além disso, a cifra de César não leva em consideração a frequência das letras na língua. Por exemplo, em uma língua como o português, a letra "A" é muito mais comum do que a letra "X". Isso significa que um atacante poderia facilmente analisar o texto criptografado e deduzir qual letra corresponde a outra, usando técnicas como a análise de frequência. Em termos modernos de criptografia, a cifra de César não é segura. Embora tenha sido útil em tempos antigos, sua simplicidade faz com que seja facilmente quebrada com ferramentas computacionais
+H → I  
+E → T  
+L → S  
+L → S  
+O → G
+
+Encrypted result: "ITSSG"
+
+2. Decrypting with the Monoalphabetic Cipher
+To decrypt a message, you need the exact substitution alphabet that was used for encryption. The process is simply reversed: you look up each encrypted letter in the new alphabet and map it back to the corresponding original letter.
+
+Using the same substitution alphabet as above, the encrypted message "ITSSG" would be decrypted like this:
+
+I → H  
+T → E  
+S → L  
+S → L  
+G → O
+
+Decrypted result: "HELLO"
+⚠️ Weaknesses
+While this cipher is stronger than the Caesar Cipher due to having 26! (factorial) possible permutations of the alphabet (≈ 4×10²⁶), it still suffers from serious security flaws:
+
+It is vulnerable to frequency analysis.
+Letters in any language tend to appear with predictable frequencies (e.g., E is common in English, A in Portuguese).
+An attacker can analyze the frequency of characters in the ciphertext and compare it to known letter frequency patterns to break the encryption.
+
+If the substitution alphabet is guessed or leaked, the entire message becomes readable instantly.
+
+Therefore, although it's historically significant and fun to experiment with, the Monoalphabetic Cipher is not suitable for protecting real-world data.
