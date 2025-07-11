@@ -126,6 +126,14 @@ If the substitution alphabet is guessed or leaked, the entire message becomes re
 
 Therefore, although it's historically significant and fun to experiment with, the Monoalphabetic Cipher is not suitable for protecting real-world data.
 
+## 👤 Author
+
+João Vitor de Oliveira Lima
+
+📧 ghostcode541@gmail.com
+
+🔗 [LinkedIn](www.linkedin.com/in/joãovitordeoliveira-lima) --> www.linkedin.com/in/joãovitordeoliveira-lima
+
 
 ## 📦 Installation
 
