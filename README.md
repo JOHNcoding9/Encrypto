@@ -29,6 +29,7 @@ Before applying encryption, the program replaces accented characters and special
     'Î': 'I', 'Ó': 'O', 'Ò': 'O', 'Ô': 'O', 'Õ': 'O', 'Ö': 'O', 'Ú': 'U', 'Ù': 'U',
     'Û': 'U', 'Ü': 'U', 'Ÿ': 'Y', 'Œ': 'OE', 'Æ': 'AE'
   }
+  
 This mapping ensures all input is safely processed without Unicode issues.
     
 
