@@ -69,8 +69,9 @@ For example, in a language like Portuguese, the letter "A" is much more common t
 In modern cryptographic terms, the Caesar Cipher is not secure.
 Although it was useful in ancient times, its simplicity makes it easily breakable using computational tools.
 
+<br>
 
-### 🇦 Explaining Monoalphabetic Substitution Cipher
+### 🅰 Explaining Monoalphabetic Substitution Cipher
 
 1. What Is It?
 The Monoalphabetic Cipher is a substitution cipher in which each letter in the plaintext is replaced by another unique letter from the alphabet.
