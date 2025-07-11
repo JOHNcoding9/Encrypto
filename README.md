@@ -19,6 +19,7 @@ This Python project automatically encrypts messages for you, using the key of yo
 
 
 ### 🔡 Character Normalization
+
 Before applying encryption, the program replaces accented characters and special letters (e.g., Ç, É, Ã) with their normalized ASCII equivalents to ensure compatibility with the cipher:
  
    Dictionary of normalization
@@ -38,6 +39,7 @@ This mapping ensures all input is safely processed without Unicode issues.
     
 
 ###:key:  Explaining Caesar Cipher
+
 1. Encrypting with the Caesar Cipher
 Imagine you have the text **"HELLO"** and want to encrypt it with a **shift of 3**. This means each letter in the word (HELLO) will be **replaced by the letter that is 3 positions ahead of it in the alphabet**:
 
@@ -68,7 +70,8 @@ In modern cryptographic terms, the Caesar Cipher is not secure.
 Although it was useful in ancient times, its simplicity makes it easily breakable using computational tools.
 
 
-##:regional_indicator_a:  Explaining Monoalphabetic Substitution Cipher
+###:regional_indicator_a:  Explaining Monoalphabetic Substitution Cipher
+
 1. What Is It?
 The Monoalphabetic Cipher is a substitution cipher in which each letter in the plaintext is replaced by another unique letter from the alphabet.
 Unlike the Caesar Cipher, which shifts letters by a fixed amount, the Monoalphabetic Cipher uses a custom substitution alphabet, which can be:
